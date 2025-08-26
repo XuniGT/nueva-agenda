@@ -2,18 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const menuIcon = document.getElementById("menu-open");
   const sidebar = document.getElementById("sidebar");
-  const menuLabel = document.getElementById("menu-label");
   const menuLinks = document.querySelectorAll(".menu a");
 
-menuBtn.addEventListener("click", () => {
-  const isClosed = sidebar.classList.toggle("closed");
-  menuIcon.classList.toggle("active", !isClosed);
-});
-  // Cerrar menú al hacer clic en cualquier enlace del menú
+  // Toggle sidebar al hacer clic en el botón hamburguesa
+  menuBtn.addEventListener("click", () => {
+    const isOpen = sidebar.classList.toggle("open");
+    menuIcon.classList.toggle("active", isOpen);
+  });
+
+  // (Opcional) Cerrar sidebar al hacer clic en un link
   menuLinks.forEach(link => {
     link.addEventListener("click", () => {
+      sidebar.classList.remove("open");
       menuIcon.classList.remove("active");
-      sidebar.classList.add("closed");
     });
   });
 });
