@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGENDAME</title>
+  <link rel="stylesheet" href="/css/style_base_dash_admin.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Botón hamburguesa en lugar de título -->
+      <button id="menu-btn" class="menu-button-wrapper" aria-label="Abrir menú de navegación" aria-controls="sidebar" aria-expanded="false"> 
+        <div id="menu-open" class="menu-button" role="presentation">
+          <span class="top_line common"></span>
+          <span class="middle_line common"></span>
+          <span class="bottom_line common"></span>
+        </div>
+        <span id="menu-label" class="menu-text">AGENDAFACIL</span>
+      </button>
+
+      <nav class="menu">
+        <a href="#disponibilidad" class="menu-item"><img src="icons/icon_calendar_dash.svg" alt=""> <span>Disponibilidad</span><span class="tooltip">Disponibilidad</span></a>
+        <a href="#servicios" class="menu-item"><img src="icons/icon_service_dash.svg" alt=""> <span>Servicios</span><span class="tooltip">Servicios</span></a>
+        <a href="#horarios" class="menu-item"><img src="icons/icon_clock_dash.svg" alt=""> <span>Horarios</span><span class="tooltip">Horarios</span></a>
+        <a href="#publicar" class="menu-item"><img src="icons/icon_share_dash.svg" alt=""> <span>Compartir</span><span class="tooltip">Compartir</span></a>
+        <a href="#datos-negocio" class="menu-item"><img src="icons/icon_account_dash.svg" alt=""> <span>Configuración</span><span class="tooltip">Configuración</span></a>
+      </nav>
+      <div class="admin-info">
+        <img class="user_img" src="/img/perfil-test.jpg" alt="Admin" />
+        <div class="admin-details">
+          <strong class="name">Daniel</strong>
+          <small class="profile">Admin</small>
+        </div>
+        <button class="icon_logout"><img src="icons/icon_logout_dash.svg" alt="Cerrar sesión"></button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-tittle">
+          <h1>Datos del negocio</h1>
+        </div>
+        <!-- Botón modo oscuro en la derecha -->
+         <div class="header-buttons">
+          <button class="dark-mode-toggle"><img src="icons/icon_dark_mode.svg" alt="Modo oscuro"></button>
+          <button class="calendar_mode"><img src="icons/icon_client_mode.svg" alt="Vista Calendario"></button>
+         </div>
+      </header>
+      <section class="content">
+        <!-- Aquí va tu contenido -->
+      </section>
+    </main>
+        <script src="/js/script_base_dash_admin.js"></script>
+  </div>
+</body>
+</html>
