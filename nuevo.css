@@ -1,0 +1,120 @@
+/* -----------------------------------
+   BASE / GENERALES
+----------------------------------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #F3F3F3;
+  height: 100dvh;
+  color: #1A1A1A;
+}
+
+/* ------------------------------
+   Variables y layout base
+------------------------------ */
+:root{
+  --sb-collapsed: 60px;
+  --sb-expanded: 250px;
+}
+
+.layout { 
+  display: flex; 
+  width: 100%;
+}
+
+.main-content{
+  flex: 1 1 auto;
+  min-width: 0; /* evita desbordes horizontales */
+}
+
+/* -----------------------------------
+   MENU LATERAL / BOTÓN HAMBURGUESA
+----------------------------------- */
+
+.menu-button-wrapper {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  height: 50px;
+  width: var(--sb-expanded);
+  border: 1px solid red;
+}
+
+.menu-button {
+  position: relative;    
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+
+.menu-text {         
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  white-space: nowrap;  
+  overflow: hidden;                     
+  transition: opacity 0.3s ease, max-width 0.3s ease;
+}
+
+.menu-button .common {
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  background: #1A1A1A;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.top_line   { top: 30%; left: 50%; transform: translate(-50%, -50%); }
+.middle_line{ top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.bottom_line{ top: 70%; left: 50%; transform: translate(-50%, -50%); }
+
+.menu-button.active .top_line {
+  top: 13px; left: 8px;
+  width: 15px;
+  transform: rotate(45deg);
+}
+
+.menu-button.active .bottom_line {
+  top: 13px; left: 8px;
+  width: 15px;
+  transform: rotate(-45deg);
+}
+
+.menu-button.active .middle_line {
+  opacity: 0;
+  transform: translate(-5px);
+}
+
+
+/* ------------------------------
+   SIDEBAR: ESTADOS / Default (250px)
+------------------------------ */
+
+/* ------------------------------
+   SIDEBAR: ESTADOS / 60px
+------------------------------ */
+
+.sidebar.open .menu-button-wrapper {
+  justify-content: center;
+  width: 60px;
+}
+
+.sidebar.open .menu-text {
+  display: none;
+}
+
+/* -----------------------------------
+   MENU INTERNO
+----------------------------------- */
+
+
+/* -----------------------------------
+   INFO DEL ADMIN
+----------------------------------- */
+
